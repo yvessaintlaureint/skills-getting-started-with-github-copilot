@@ -65,32 +65,68 @@ section h3 {
   background-color: #f9f9f9;
 }
 
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+/* Participants section (added) */
+.participants-section {
+  margin-top: 12px;
 }
 
-.activity-card p {
-  margin-bottom: 8px;
+.participants-section h5 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-.form-group {
-  margin-bottom: 15px;
+/* Participant chips */
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.participant-item {
+  display: inline-flex;
+  align-items: center;
+  background: #f7fbff;
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: #073b4c;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.02);
 }
 
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+/* Avatar circle with initials */
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#7dd3fc,#38bdf8);
+  color: #042a2b;
+  font-weight: 600;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.participant-name {
+  white-space: nowrap;
+}
+
+/* Fallback when no participants */
+.no-participants {
+  color: #6b7280;
+  font-style: italic;
+  margin: 4px 0 0;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .participant-item { padding: 6px 8px; }
+  .participant-name { font-size: 0.85rem; }
 }
 
 button {
